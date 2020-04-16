@@ -9,7 +9,7 @@ import { UserslistComponent } from 'src/app/shared/userslist/userslist.component
 export class ActiveUserListComponent extends UserslistComponent {
     putValuesInUserList(){
     for(let key of Object.keys(this.users)){
-      if(this.users[key].isDeleted === false){
+      if(!this.users[key].isDeleted){
       this.userList.push(this.users[key]);
       }
     }
