@@ -1,0 +1,7 @@
+<div class="d-flex flex-column justify-content-center">
+    <div [ngStyle]="user.isDeleted === false ? styleActive : styleDeactive" class="text-primary font-weight-bold">
+       {{ user.firstName }} {{user.lastName}}
+       <button [ngStyle] = "buttonStyle" type="button" class="btn btn-success" *ngIf="user.isDeleted === true">Active</button>
+       <button [ngStyle] = "buttonStyle" type="button" class="btn btn-danger" *ngIf="user.isDeleted === false">Deactive</button>
+</div>
+</div>

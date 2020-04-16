@@ -1,0 +1,19 @@
+<div class="d-flex bd-highlight">
+
+<div class="p-2 w-50 bd-highlight">
+    <div *ngFor="let user of userList">
+        <div class="d-flex flex-column justify-content-center">
+            <div [ngStyle]="user.isDeleted === false ? styleActive : styleDeactive" class="text-primary font-weight-bold">
+               {{ user.firstName }} {{user.lastName}}
+               <button (click)="displayDetails(user.id)" [ngStyle] = "buttonStyle" type="button" class="btn btn-info">Details</button>
+        </div>
+        </div>
+    </div>
+    
+</div>
+<div class="p-2 w-50 bd-highlight">
+<router-outlet></router-outlet>
+<div>
+<div>
+</div>
+</div>
